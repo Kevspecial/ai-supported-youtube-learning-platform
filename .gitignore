@@ -1,0 +1,125 @@
+# --- Python bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- C extensions ---
+*.so
+*.pyd
+*.pyo
+
+# --- Distribution / packaging ---
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Unit test / coverage ---
+.coverage
+.coverage.*
+.cache/
+.nox/
+.tox/
+.pytest_cache/
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+
+# --- Type checkers / linters ---
+.mypy_cache/
+.pytype/
+.pyre/
+.ruff_cache/
+.pylint.d/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Virtual environments ---
+/.venv
+./.virtualenvs
+./.env
+./venv
+./virtual/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Environment files / secrets ---
+.env
+.env.*
+.envrc
+.secrets*
+.secret*
+.credentials*
+*.pem
+*.key
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Temp files ---
+tmp/
+temp/
+.tmp/
+*.tmp
+*.swp
+*.swo
+
+# --- IDE / Editor / OS ---
+.idea/
+.vscode/
+.history/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- ML/AI caches & artifacts ---
+.huggingface/
+huggingface/
+.transformers/
+.whisper/
+wandb/
+mlruns/
+lightning_logs/
+checkpoints/
+runs/
+artifacts/
+models/
+
+# --- Generated data/media (adjust as needed) ---
+datasets/
+data/
+media/
+audio/
+video/
+transcripts/
+exports/
+
+# yt-dlp outputs commonly go to downloads/ (already ignored above)
+
+# Flask instance folder (if used)
+instance/
+
+# Node (if introduced later)
+node_modules/
+
+# --- Allowlist ---
+!.python-version
