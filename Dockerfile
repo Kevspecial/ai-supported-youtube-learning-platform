@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
@@ -12,11 +12,12 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Offload folder to load a large model in Docker
-VOLUME ["/tmp/offload_folder"]
+# Create offload folder for large model loading
+RUN mkdir -p /tmp/offload_folder
 
 # Copy application code
-COPY src .
+COPY src/ ./
+COPY SpecsAgents/ ./SpecsAgents/
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
@@ -27,4 +28,4 @@ ENV PYTHONUNBUFFERED=1 \
 EXPOSE 5000
 
 # Run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "999", "--graceful-timeout", "999", "main:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "300", "--graceful-timeout", "30", "--workers", "1", "main:app"]
