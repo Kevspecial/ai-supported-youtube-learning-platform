@@ -123,3 +123,9 @@ node_modules/
 
 # --- Allowlist ---
 !.python-version
+
+.junie
+/.junie/*
+
+SpecsAgents
+/SpecsAgents/*
